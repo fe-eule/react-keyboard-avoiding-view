@@ -8,6 +8,17 @@ react-keyboard-avoiding-view is a simple and easy to use package that allows you
 
 In iOS, the keyboard will cover the input field when it pops up. This package will help you to avoid this issue.
 
+## Preview
+
+### iOS issue 🥹
+
+https://github.com/user-attachments/assets/d0ee5892-50a7-4d66-995d-a64fc215a247
+
+### with `react-keyboard-avoiding-view` 😎
+
+https://github.com/user-attachments/assets/765d72ae-03b7-4d83-8ecc-42cb893a6d3f
+
+
 ## Installation
 
 ```bash
