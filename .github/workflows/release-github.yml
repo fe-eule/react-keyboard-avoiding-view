@@ -1,4 +1,4 @@
-name: on release
+name: publish github registry
 
 on:
   release:
@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: ".nvmrc"
+          node-version-file: ".nvmrc"
           registry-url: https://registry.npmjs.org/
       - run: npm install
       - run: npm run build
