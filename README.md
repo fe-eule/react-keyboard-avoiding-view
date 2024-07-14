@@ -11,7 +11,7 @@ In iOS, the keyboard will cover the input field when it pops up. This package wi
 ## Installation
 
 ```bash
-npm install react-keyboard-avoiding-view
+npm install @fe-eule/react-keyboard-avoiding-view
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ npm install react-keyboard-avoiding-view
 ```jsx
 // in react not react-native
 import React from "react";
-import KeyboardAvoidingView from "react-keyboard-avoiding-view";
+import KeyboardAvoidingView from "@fe-eule/react-keyboard-avoiding-view";
 
 const App = () => {
   return (

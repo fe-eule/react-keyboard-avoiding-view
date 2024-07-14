@@ -1,6 +1,6 @@
 {
-  "name": "react-keyboard-avoiding-view",
-  "version": "1.0.8",
+  "name": "@fe-eule/react-keyboard-avoiding-view",
+  "version": "1.0.9",
   "private": false,
   "description": "This component is a component that automatically adjusts the view so that the fixed element is not covered by the keyboard when the keyboard appears on iOS devices.",
   "keywords": [
@@ -53,6 +53,7 @@
   },
   "publishConfig": {
     "main": "dist/index.js",
-    "source": "src/index.ts"
+    "source": "src/index.ts",
+    "registry": "https://npm.pkg.github.com/"
   }
 }
