@@ -16,7 +16,6 @@ https://github.com/user-attachments/assets/d0ee5892-50a7-4d66-995d-a64fc215a247
 
 https://github.com/user-attachments/assets/765d72ae-03b7-4d83-8ecc-42cb893a6d3f
 
-
 ## Installation
 
 ```bash
@@ -33,7 +32,7 @@ import KeyboardAvoidingView from "@fe-eule/react-keyboard-avoiding-view";
 const App = () => {
   return (
     <div>
-      <input type="text" />
+      <input className="keyboard-avoiding-input" type="text" />
       <KeyboardAvoidingView>
         <button type="button">Next</button>
       </KeyboardAvoidingView>
