@@ -50,6 +50,10 @@ export const KeyboardAvoidingView = forwardRef<
     const [adjustedTranslateY, setAdjustedTranslateY] = useState<number>(0);
     const initialInnerHeight = useRef<number>(window.innerHeight).current;
 
+    /**
+     * Why use debounce?
+     * If the scroll event is triggered multiple times, the performance may be degraded.
+     */
     const handleChangeChildTranslateTriggerEvent = useDebouncedCallback(
       () => {
         const keyboardTopPosition = computeKeyboardTopPosition({
@@ -127,6 +131,8 @@ export const KeyboardAvoidingView = forwardRef<
       /**
        * Only for iOS, when the virtual keyboard is raised,
        * the logic to raise the button above the virtual keyboard is executed, so return if it is not iOS
+       *
+       * Android devices do not need to adjust the view when the virtual keyboard is raised.
        */
       if (!checkIsIOS()) {
         return;
