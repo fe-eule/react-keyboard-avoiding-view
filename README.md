@@ -25,7 +25,10 @@ npm install @fe-eule/react-keyboard-avoiding-view
 ## Usage
 
 ```jsx
-// in react not react-native
+/**
+ * Use react not react-native
+ * Support server side rendering
+ */
 import React from "react";
 import KeyboardAvoidingView from "@fe-eule/react-keyboard-avoiding-view";
 

@@ -29,3 +29,8 @@ export const makeNegativeTranslateY = (value: number) =>
   `translateY(-${value}px)`;
 
 export const checkIsIOS = () => /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+export const getViewPortHeight = () =>
+  typeof window === "undefined"
+    ? 0
+    : window.visualViewport?.height || window.innerHeight;

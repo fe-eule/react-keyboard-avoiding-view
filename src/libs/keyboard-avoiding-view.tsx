@@ -15,6 +15,7 @@ import {
 import {
   checkIsIOS,
   computeKeyboardTopPosition,
+  getViewPortHeight,
   isKeyboardAvoidingInputElement,
   makeNegativeTranslateY,
 } from "./keyboard-avoiding-view.util";
@@ -48,7 +49,7 @@ export const KeyboardAvoidingView = forwardRef<
     const [isVirtualKeyboardShown, setVirtualKeyboardShown] =
       useState<boolean>(false);
     const [adjustedTranslateY, setAdjustedTranslateY] = useState<number>(0);
-    const initialInnerHeight = useRef<number>(window.innerHeight).current;
+    const initialInnerHeight = useRef<number>(0);
 
     /**
      * Why use debounce?
@@ -57,7 +58,7 @@ export const KeyboardAvoidingView = forwardRef<
     const handleChangeChildTranslateTriggerEvent = useDebouncedCallback(
       () => {
         const keyboardTopPosition = computeKeyboardTopPosition({
-          initialInnerHeight,
+          initialInnerHeight: initialInnerHeight.current,
         });
         if (keyboardTopPosition <= 0) {
           return;
@@ -138,6 +139,7 @@ export const KeyboardAvoidingView = forwardRef<
         return;
       }
 
+      initialInnerHeight.current = getViewPortHeight();
       setupListeners();
     });
 
