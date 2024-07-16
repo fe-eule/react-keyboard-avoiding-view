@@ -2,7 +2,7 @@
 
 [![npm bundle size](https://img.shields.io/bundlephobia/min/react-keyboard-avoiding-view)](https://bundlephobia.com/package/@fe-eule/react-keyboard-avoiding-view)
 
-`react-keyboard-avoiding-view` is a simple and easy to use package that allows you to avoid the keyboard when it pops up on your screen. It is a simple wrapper around the KeyboardAvoidingView component.
+`react-keyboard-avoiding-view` is a simple and easy to use package that allows you to avoid the keyboard when it pops up on your screen in iOS. It is a simple wrapper around the KeyboardAvoidingView component.
 
 In iOS, the keyboard will cover the fixed elements when it pops up. This package will help you to avoid this issue.
 
